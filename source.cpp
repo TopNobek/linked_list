@@ -62,7 +62,16 @@ void del(int u_id) {
 	node* p;
 	
 	if(u_id == 0) {
-		h = h->next;
+		if(id != 1) {
+			h = h->next;
+		}
+		else {
+			h = NULL;
+			t = NULL;
+			id--;
+			cout<<"dupa"<<endl;
+			return;
+		}
 		id--;
 		reset_id();
 		return;
